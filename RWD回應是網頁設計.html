@@ -141,7 +141,59 @@
             width: 100%;
             background: #eaeaea;		
             clear: both;        
-        }	
+        }
+		body{
+            background-color: greenyellow;
+        }
+        .headline{
+            font-size: 30px;
+            font-weight:bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .desktop-menu{
+            text-align:center;
+            display: block;
+        }
+        .mobil-menu{
+            text-align: center;
+            display: none;
+        }
+        .list{
+            display:flex;/*讓下一層次水平排列*/
+            justify-content: center;
+        }
+        .item{
+            background-color: pink;
+            flex:none;
+            width:280px;
+            margin:10px;
+        }
+        @media only screen and (max-width:1250px) {
+            .list{
+                flex-wrap: wrap;
+            }
+            .item{
+                width: 45%;
+            }
+        }
+     @media only screen and (max-width:700px) {
+        body{
+            background-color: palevioletred;
+        }
+        .headline{
+            font-size: 20px;
+        }
+        .desktop-menu{
+            display: none;
+        }
+        .mobil-menu{
+            display: block;
+        }
+        .item{
+            width: 90%;
+        }
+        }
 	</style>
 </head>
 <body>
